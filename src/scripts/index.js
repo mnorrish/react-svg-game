@@ -2,8 +2,9 @@
 import es6Promise from 'es6-promise';
 import 'whatwg-fetch';
 
-// normalize.css
+// styles
 import 'normalize.css';
+import '../styles/main.sass';
 
 import main from './main';
 

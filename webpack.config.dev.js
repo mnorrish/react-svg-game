@@ -64,6 +64,13 @@ module.exports = {
         ]
       },
       {
+        test: /\.(sass)$/,
+        loader: 'style!css!sass?indentedSyntax',
+        include: [
+          path.join(__dirname, 'src/styles')
+        ]
+      },
+      {
         test: /\.png$/,
         loader: 'url?.[ext]&mimetype=image/png',
         include: path.join(__dirname, 'src/images')
@@ -79,7 +86,7 @@ module.exports = {
         include: path.join(__dirname, 'src/fonts')
       }
     ],
-    postcss: function () {
+    postcss: () => {
       return [autoprefixer({browsers: ['last 2 versions']})];
     }
   }
