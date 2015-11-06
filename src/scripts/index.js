@@ -1,9 +1,11 @@
 // polyfills
-require('es6-promise').polyfill();
-require('whatwg-fetch');
+import es6Promise from 'es6-promise';
+import 'whatwg-fetch';
 
 // normalize.css
-require('normalize.css');
+import 'normalize.css';
 
-// require your app here
-require('debug-dude')('service').warn('require your app entry point plz');
+import main from './main';
+
+es6Promise.polyfill();
+main();
